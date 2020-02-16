@@ -61,6 +61,26 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 ```
 
+## checklist for testing the development environment
+please note I use a project of mine in here, you can choose one of your if you prefer
+``` zsh
+# This downloads the demo project
+git clone https://github.com/rondinif/ita-webpack4-labs.git
+cd ita-webpack4-labs
+# This loads install all dependecies in the demo project
+npm i 
+# This do a lot of builds using npm, nodejs, webpack, pug and so on
+npm run build
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# if all is well so far then the development environment works
+# ____________________________________________________________
+
+# This clean-up the filesystem used for the test 
+cd ..
+rm -rf ita-webpack4-labs
+```
+
 # credits
 ## references by other authors whose advice I have followed 
 - https://medium.com/@jamesauble/install-nvm-on-mac-with-brew-adb921fb92cc
