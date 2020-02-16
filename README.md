@@ -46,6 +46,7 @@ nvm install v12.16.0
 nvm alias default v12.16.0 
 nvm ls
 brew install jq
+npm config set ignore-scripts true
 ```
 ![status](20200216-115223-status.png)
 
@@ -70,7 +71,8 @@ cd ita-webpack4-labs
 # This loads install all dependecies in the demo project
 npm i 
 # This do a lot of builds using npm, nodejs, webpack, pug and so on
-npm run build
+npm --ignore-scripts=false run build-lab-01
+npm --ignore-scripts=false run build-lab-pug-03
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # if all is well so far then the development environment works
@@ -82,9 +84,11 @@ rm -rf ita-webpack4-labs
 ```
 
 # credits
-## references by other authors whose advice I have followed 
-- https://medium.com/@jamesauble/install-nvm-on-mac-with-brew-adb921fb92cc
-- https://eric.blog/2016/08/23/set-default-node-version-with-nvm/
+## references by posts of other authors whose advice I have followed 
+- ["Install NVM On Mac With Brew" by James Auble](https://medium.com/@jamesauble/install-nvm-on-mac-with-brew-adb921fb92cc)
+- ["Set default node version with NVM" by ERIC BINNION](https://eric.blog/2016/08/23/set-default-node-version-with-nvm/)
+- [Predicting the Future of the Web Development (2020 and 2025)](https://youtu.be/24tQRwIRP_w) 16':27''
+- [Package install scripts vulnerability](https://blog.npmjs.org/post/141702881055/package-install-scripts-vulnerability)
 
 ## other interesting tips that I haven't applied yet 
 - https://stackoverflow.com/questions/47009776/how-to-run-nvm-in-oh-my-zsh 
